@@ -1,0 +1,161 @@
+@import url(../global.css);
+@import url(js.css);
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  background: linear-gradient(
+    45deg,
+    var(--azul1) 0%,
+    var(--azul2) 100%,
+    var(--azul1) 80%
+  );
+}
+
+main {
+  padding: 10px;
+  border-radius: 10px;
+  width: 95%;
+  height: 90%;
+  display: flex;
+  margin-top: 50px;
+}
+
+section:nth-of-type(1) {
+  flex-grow: 0.5;
+}
+section:nth-of-type(2) {
+  flex-grow: 3.5;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+.spnQtd {
+  text-align: end;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.question {
+  background: linear-gradient(
+    45deg,
+    var(--vermelho1) 0%,
+    var(--vermelho2) 50%,
+    var(--vermelho1) 100%
+  );
+  border-radius: 10px;
+  padding: 10px;
+  height: 120px;
+  width: 100%;
+  color: white;
+  border: solid 1.5px white;
+}
+
+button {
+  width: 90%;
+  text-align: start;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: linear-gradient(
+    45deg,
+    var(--vermelho1) 0%,
+    var(--vermelho2) 50%,
+    var(--vermelho1) 100%
+  );
+  color: white;
+  height: 70px;
+  transition: background 0.5s ease-in-out;
+  background-size: 500px 1px;
+  border: solid 1.5px white;
+}
+
+button:hover {
+  background-position: 250px;
+}
+
+.finish button {
+  text-align: center;
+}
+
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
+}
+
+.options {
+  display: flex;
+  flex-flow: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.pular,
+.universitarios,
+.dica {
+  width: 80%;
+  height: 140px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: solid 1px white;
+  box-shadow: inset 0px 0px 5px white;
+  background-color: rgba(255, 255, 255, 0.562);
+}
+
+.placar {
+  width: 100%;
+  height: 200px;
+  background: white;
+}
+
+.opcoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.opcoes div {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.pular .opcoes div {
+  background-image: url(../../images/index/pular.png);
+  background-size: cover;
+}
+
+.universitarios .opcoes div {
+  background-image: url(../../images/index/universitarios.png);
+  background-size: cover;
+}
+
+.dica .opcoes div {
+  background-image: url(../../images/index/dica.png);
+  background-size: cover;
+}

@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* Ver se vai ter internet, se não tiver, tem que baixar a fonte */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+:root {
+  --vermelho1: #ab2711;
+  --vermelho2: #f13617;
+  --azul1: #101d93;
+  --azul2: #7589f2;
+}
