@@ -28,3 +28,9 @@
   align-items: center;
   justify-content: center;
 }
+
+.ativado,
+.usada {
+  pointer-events: none;
+  cursor: none;
+}
