@@ -11,6 +11,7 @@ const popUpEliminado = document.querySelector(".eliminado");
 const divPular = document.querySelector(".pular .opcoes");
 const opcoesPular = document.querySelectorAll(".pulo");
 const dicas = document.querySelectorAll(".dica .opcoes div");
+const perguntaElement = document.querySelector(".question");
 
 let pulosRestantes = 3; // Contador de pulos disponíveis
 let dicasDisponiveis = 3; // Contador de dicas disponíveis
@@ -53,6 +54,19 @@ function obterPerguntasOrdenadas(perguntas) {
   perguntasDificeis = sortearPerguntas(perguntas, 3, 6); // 6 perguntas difíceis
 }
 
+// Função de efeito "máquina de escrever"
+const typeWriter = (elemento) => {
+  const arrayPergunta = elemento.innerHTML.split(""); // Quebra a pergunta em letras
+  elemento.innerHTML = ""; // Limpa o conteúdo do elemento antes de iniciar o efeito
+
+  // Exibe cada letra com um intervalo
+  arrayPergunta.forEach((letra, index) => {
+    setTimeout(() => {
+      elemento.innerHTML += letra;
+    }, 100 * index); // 100 ms de intervalo entre cada letra
+  });
+};
+
 // Carrega a próxima pergunta com base na dificuldade atual
 function carregarPergunta() {
   somVinheta.play(); // Toca a vinheta ao carregar a pergunta
@@ -71,6 +85,9 @@ function carregarPergunta() {
 
   respostas.innerHTML = ""; // Limpa as respostas anteriores
   pergunta.innerHTML = item.question; // Exibe a pergunta atual
+
+  // Aplica o efeito de máquina de escrever na pergunta
+  typeWriter(perguntaElement);
 
   // Cria e adiciona botões de resposta
   item.answers.forEach((resposta, i) => {
