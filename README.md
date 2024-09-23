@@ -1,24 +1,30 @@
-# Show do Milhão - ETEC
+# 💲 Show do Milhão - ETEC 💲
 
-## Descrição
+## 📜 Descrição
 
-Este projeto é uma versão do famoso programa de TV "Show do Milhão", adaptada para a feira da ETEC de Desenvolvimento de Sistemas. O jogo permite que os participantes testem seus conhecimentos em uma competição divertida, respondendo a perguntas de múltipla escolha.
+Este projeto é uma versão do famoso programa de TV **"Show do Milhão"**, adaptada para a feira do empreendedor da **ETEC** do curso de **Desenvolvimento de Sistemas**. O jogo permite que os participantes testem seus conhecimentos em uma competição divertida, respondendo a perguntas de múltipla escolha. 🎓💡
 
-## Funcionalidades
+## 🌐 Prévia do Site
 
-- **Perguntas e Respostas**: Um conjunto diversificado de perguntas de diferentes categorias e níveis de dificuldade.
-- **Sistema de Pontuação**: Os participantes acumulam pontos ao responder corretamente.
-- **Tempo Limite**: Cronômetro que aumenta a tensão a cada pergunta.
-- **Eliminação de Alternativas**: Uma opção de "dica" que permite eliminar uma resposta errada, ajudando o jogador a escolher a correta, podendo ser utilizada até 3 vezes.
-- **Pular Perguntas**: Uma opção de pular pergunta que permite ir para a próxima pergunta, podendo ser utilizada até 3 vezes.
-- **Univeristários**: A opção universitários irá adicionar um tempo no cronometro, dando tempo para o respondente possa consultar o restante do seu time.
+🔗 [**Clique aqui para acessar a prévia do site!**](https://jogo-show-do-milhao.vercel.app)
 
-## Tecnologias Utilizadas
+Veja a aplicação diretamente no Vercel e explore as funcionalidades! 🚀
 
-- HTML
-- CSS
-- JavaScript
+## ⚙️ Funcionalidades
 
-## Contribuições
+- **❓ Perguntas e Respostas**: Um conjunto diversificado de perguntas de diferentes categorias e níveis de dificuldade.  
+- **🏆 Sistema de Pontuação**: Os participantes acumulam pontos ao responder corretamente.  
+- **⏲️ Tempo Limite**: Cronômetro que aumenta a tensão a cada pergunta.  
+- **🚫 Eliminação de Alternativas**: Opção que permite eliminar uma resposta errada aleatória, ajudando o jogador a escolher a correta (pode ser usada até 3 vezes).  
+- **⏭️ Pular Perguntas**: Permite ir para a próxima pergunta (pode ser usada até 3 vezes).  
+- **🎓 Universitários**: Adiciona tempo extra no cronômetro, permitindo que o jogador consulte seu time.
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir um pull request ou issue para discutir melhorias.
+## 💻 Tecnologias Utilizadas
+
+- 🖼️ HTML  
+- 🎨 CSS  
+- 🖥️ JavaScript  
+
+## 🤝 Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir um **pull request** ou **issue** para discutir melhorias. ✨
