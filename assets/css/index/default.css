@@ -1,13 +1,41 @@
 @import url(../global.css);
 @import url(js.css);
 
-body {
-  height: 100vh;
+body,
+header,
+main,
+.cronometro,
+.cronometro p,
+.informativo p,
+header button,
+.funcionais p,
+.pular,
+.universitarios,
+.dica,
+.opcoes,
+.ajuda,
+.informativo,
+.funcionais {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.cronometro,
+.informativo p,
+.funcionais p,
+.pular,
+.universitarios,
+.dica {
+  border: solid 1px white;
+  box-shadow: inset 0px 0px 5px white;
+  background-color: rgba(255, 255, 255, 0.562);
+}
+
+body {
+  height: 100vh;
   flex-direction: column;
-  gap: 5px;
+  gap: 2vh;
   background: linear-gradient(
     45deg,
     var(--azul1) 0%,
@@ -16,13 +44,80 @@ body {
   );
 }
 
+header {
+  width: 100%;
+  gap: 30px;
+  height: 30vh;
+}
+
 main {
-  padding: 10px;
-  border-radius: 10px;
-  width: 95%;
+  width: 90%;
   height: 90%;
-  display: flex;
-  margin-top: 50px;
+}
+
+hr {
+  width: 100%;
+}
+
+.informativo,
+.funcionais {
+  flex-flow: column;
+  gap: 10px;
+}
+
+.informativo p,
+header p,
+header button {
+  border-radius: 20px;
+  height: 63px;
+  width: 150px;
+  flex-flow: column;
+}
+
+header button {
+  cursor: pointer;
+}
+
+.informativo button,
+.informativo p {
+  border: solid 1px white;
+  box-shadow: inset 0px 0px 5px white;
+  background-color: rgba(255, 0, 0, 0.5);
+  transition: 0.2s;
+}
+
+.informativo button:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+.funcionais button,
+.funcionais p {
+  border: solid 1px white;
+  box-shadow: inset 0px 0px 5px white;
+  background-color: rgba(0, 255, 0, 0.5);
+  transition: 0.2s;
+}
+
+.funcionais button:hover {
+  background-color: rgb(0, 255, 0);
+}
+
+.informativo span:last-of-type,
+.funcionais span:last-of-type {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.cronometro {
+  width: 50%;
+  height: 135px;
+  border-radius: 20px;
+  font-size: 70px;
+}
+
+.cronometro p {
+  width: 150px;
+  font-weight: bold;
 }
 
 section:nth-of-type(1) {
@@ -44,6 +139,7 @@ section:nth-of-type(2) {
   position: absolute;
   right: 10px;
   top: 10px;
+  font-size: 25px;
 }
 
 .answers {
@@ -65,26 +161,8 @@ section:nth-of-type(2) {
   width: 100%;
   color: white;
   border: solid 1.5px white;
-}
-
-button {
-  width: 90%;
-  text-align: start;
-  padding: 5px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background: linear-gradient(
-    45deg,
-    var(--vermelho1) 0%,
-    var(--vermelho2) 50%,
-    var(--vermelho1) 100%
-  );
-  color: white;
-  height: 70px;
-  transition: background 0.5s ease-in-out;
-  background-size: 500px 1px;
-  border: solid 1.5px white;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 button:hover {
@@ -96,18 +174,16 @@ button:hover {
 }
 
 .correct {
-  background-color: green;
+  background: green;
 }
 
 .incorrect {
-  background-color: red;
+  background: red;
 }
 
-.options {
-  display: flex;
+.ajuda {
   flex-flow: column;
   gap: 30px;
-  align-items: center;
 }
 
 .pular,
@@ -116,26 +192,11 @@ button:hover {
   width: 80%;
   height: 140px;
   border-radius: 10px;
-  display: flex;
   flex-flow: column;
-  justify-content: center;
-  align-items: center;
   gap: 5px;
-  border: solid 1px white;
-  box-shadow: inset 0px 0px 5px white;
-  background-color: rgba(255, 255, 255, 0.562);
-}
-
-.placar {
-  width: 100%;
-  height: 200px;
-  background: white;
 }
 
 .opcoes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 10px;
 }
 
@@ -143,6 +204,11 @@ button:hover {
   height: 60px;
   width: 60px;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.opcoes div:hover {
+  transform: scale(1.2);
 }
 
 .pular .opcoes div {
