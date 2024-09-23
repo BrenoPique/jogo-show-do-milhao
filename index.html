@@ -1,20 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/index/default.css" />
+    <script src="assets/js/index/index.js" type="module"></script>
   </head>
   <body>
-    <aside class="placar">
-      <div class="continue">
-        <button>Continuar</button>
+    <header>
+      <div class="informativo">
+        <p>
+          <span>Parar</span>
+          <span>0 pts</span>
+        </p>
+        <button class="parar">Parar</button>
       </div>
-    </aside>
+      <div class="cronometro">
+        <p>00</p>
+        :
+        <p>20</p>
+      </div>
+      <div class="funcionais">
+        <p>
+          <span>Acertar</span>
+          <span>31.250 pts</span>
+        </p>
+        <button class="continue">Continuar</button>
+      </div>
+    </header>
+    <hr />
     <main>
-      <section class="options">
+      <section class="ajuda">
         <div class="pular">
           <h2>Pular</h2>
           <div class="opcoes">
@@ -32,7 +50,7 @@
           </div>
         </div>
         <div class="dica">
-          <h2>Dica</h2>
+          <h2>Eliminar Opção</h2>
           <div class="opcoes">
             <div></div>
             <div></div>
@@ -55,7 +73,5 @@
         </div>
       </section>
     </main>
-
-    <script src="assets/js/index/script.js" type="module"></script>
   </body>
 </html>
