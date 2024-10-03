@@ -1,0 +1,7 @@
+.aumentar {
+  transform: translate(-50%, -30%) scale(1.8) !important; /* Aumenta 20% do tamanho */
+}
+
+.ok {
+  background-image: url(../../images/end/ok.png) !important;
+}

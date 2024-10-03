@@ -1,227 +1,73 @@
 @import url(../global.css);
-@import url(js.css);
 
-body,
-header,
-main,
-.cronometro,
-.cronometro p,
-.informativo p,
-header button,
-.funcionais p,
-.pular,
-.universitarios,
-.dica,
-.opcoes,
-.ajuda,
-.informativo,
-.funcionais {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cronometro,
-.informativo p,
-.funcionais p,
-.pular,
-.universitarios,
-.dica {
-  border: solid 1px white;
-  box-shadow: inset 0px 0px 5px white;
-  background-color: rgba(255, 255, 255, 0.562);
-}
-
-body {
-  height: 100vh;
-  flex-direction: column;
-  gap: 2vh;
-  background: linear-gradient(
-    45deg,
-    var(--azul1) 0%,
-    var(--azul2) 100%,
-    var(--azul1) 80%
-  );
+main {
+  width: 100%;
+  height: 77vh;
+  background-image: url(../../images/index/planoShowMilhao.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: invert(1);
 }
 
 header {
-  width: 100%;
-  gap: 30px;
-  height: 30vh;
-}
-
-main {
-  width: 90%;
-  height: 90%;
-}
-
-hr {
-  width: 100%;
-}
-
-.informativo,
-.funcionais {
-  flex-flow: column;
-  gap: 10px;
-}
-
-.informativo p,
-header p,
-header button {
-  border-radius: 20px;
-  height: 63px;
-  width: 150px;
-  flex-flow: column;
-}
-
-header button {
-  cursor: pointer;
-}
-
-.informativo button,
-.informativo p {
-  border: solid 1px white;
-  box-shadow: inset 0px 0px 5px white;
-  background-color: rgba(255, 0, 0, 0.5);
-  transition: 0.2s;
-}
-
-.informativo button:hover {
-  background-color: rgb(255, 0, 0);
-}
-
-.funcionais button,
-.funcionais p {
-  border: solid 1px white;
-  box-shadow: inset 0px 0px 5px white;
-  background-color: rgba(0, 255, 0, 0.5);
-  transition: 0.2s;
-}
-
-.funcionais button:hover {
-  background-color: rgb(0, 255, 0);
-}
-
-.informativo span:last-of-type,
-.funcionais span:last-of-type {
-  font-weight: 900;
-  font-size: 20px;
-}
-
-.cronometro {
-  width: 50%;
-  height: 135px;
-  border-radius: 20px;
-  font-size: 70px;
-}
-
-.cronometro p {
-  width: 150px;
-  font-weight: bold;
-}
-
-section:nth-of-type(1) {
-  width: 30%;
-}
-section:nth-of-type(2) {
-  width: 70%;
-}
-
-.content {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
 }
 
-.spnQtd {
+.head {
+  display: flex;
   text-align: end;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  font-size: 25px;
-}
-
-.answers {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.question {
-  background: linear-gradient(
-    45deg,
-    var(--vermelho1) 0%,
-    var(--vermelho2) 50%,
-    var(--vermelho1) 100%
-  );
-  border-radius: 10px;
+  gap: 10px;
+  border: solid 1px white;
+  box-shadow: inset 0px 0px 5px white;
+  background-color: rgba(255, 255, 255, 0.562);
+  border-radius: 20px;
+  overflow: hidden;
   padding: 10px;
-  height: 120px;
-  width: 100%;
+}
+
+label {
+  display: flex;
+  width: 160px;
+}
+
+input {
+  width: 50px;
+  height: 50px;
+  text-align: right;
+  font-size: 20px;
+  background: none;
+  border: solid 2px #262626;
+  border-radius: 50%;
+}
+
+button {
+  border-radius: 20px;
+  width: 242px;
+  height: 70px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    var(--vermelho1) 0%,
+    var(--vermelho1) 50%,
+    #262626 50%,
+    #262626 100%
+  );
   color: white;
+  transition: background 0.5s ease-in-out;
+  background-size: 500px 1px;
   border: solid 1.5px white;
   font-size: 20px;
-  font-weight: bold;
 }
 
 button:hover {
   background-position: 250px;
 }
 
-.finish button {
-  text-align: center;
-}
-
-.correct {
-  background: green;
-}
-
-.incorrect {
-  background: red;
-}
-
-.ajuda {
-  flex-flow: column;
-  gap: 30px;
-}
-
-.pular,
-.universitarios,
-.dica {
-  width: 80%;
-  height: 140px;
-  border-radius: 10px;
-  flex-flow: column;
-  gap: 5px;
-}
-
-.opcoes {
-  gap: 10px;
-}
-
-.opcoes div {
-  height: 60px;
-  width: 60px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.opcoes div:hover {
-  transform: scale(1.2);
-}
-
-.pular .opcoes div {
-  background-image: url(../../images/index/pular.png);
-  background-size: cover;
-}
-
-.universitarios .opcoes div {
-  background-image: url(../../images/index/universitarios.png);
-  background-size: cover;
-}
-
-.dica .opcoes div {
-  background-image: url(../../images/index/dica.png);
-  background-size: cover;
+hr {
+  width: 100%;
 }

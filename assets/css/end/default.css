@@ -1,0 +1,66 @@
+@import url(js.css);
+@import url(../global.css);
+
+body {
+  display: block;
+}
+
+.loader-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+  gap: 80px;
+}
+
+.progress-bar {
+  width: 60%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 50px;
+  position: relative;
+  box-shadow: 0px 0px 5px #262626;
+}
+
+.progress {
+  width: 0;
+  height: 100%;
+  background-color: green;
+  transition: width 0.2s;
+  border-radius: 10px;
+}
+
+.mark {
+  position: absolute;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  z-index: 1;
+  transform: translate(-50%, -30%);
+  background-image: url(../../images/end/x.png);
+  background-size: contain;
+  backdrop-filter: blur(100px);
+  border: solid 1px #262626;
+  transition: transform 0.5s;
+}
+
+.mark:last-of-type {
+  background-image: url(../../images/end/premio.png);
+  backdrop-filter: blur(0px);
+  border: none;
+}
+
+a {
+  position: absolute;
+}
+
+.pontos {
+  margin-left: 20px;
+  display: inline-block;
+  width: 190px;
+  text-align: center;
+  background-color: #fafafa85;
+  border-radius: 20px;
+}
