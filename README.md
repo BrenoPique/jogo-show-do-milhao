@@ -23,7 +23,8 @@ Veja a aplicação diretamente no Vercel e explore as funcionalidades! 🚀
 
 - 🖼️ HTML  
 - 🎨 CSS  
-- 🖥️ JavaScript  
+- 🖥️ JavaScript
+- 💻 TypeScript
 
 ## 🤝 Contribuições
 
