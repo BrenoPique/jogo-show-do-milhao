@@ -36,3 +36,10 @@ header {
   gap: 30px;
   height: 20vh;
 }
+
+a {
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 0;
+}

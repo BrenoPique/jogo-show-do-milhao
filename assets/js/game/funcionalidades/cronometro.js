@@ -38,7 +38,9 @@ export function iniciarCronometro() {
       clearInterval(timer); // Para o cronômetro quando o tempo acaba
       diminuirErrosRestantes();
       setTimeout(() => {
-        sounds.somErrou.play(); // Toca som de erro
+        sounds.tempoAcabou.play();
+        const respostaCorreta = document.querySelector('[data-correct="true"]');
+        respostaCorreta.classList.add("correct");
         exibirPopupEliminado(); // Exibe o pop-up de eliminação
         // Desabilita os botões de resposta
         desabilitarRespostas();

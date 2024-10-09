@@ -1,5 +1,5 @@
 // dicas.js
-
+import sounds from "../modulo/sounds.js";
 // 1. Variáveis necessárias para o uso das dicas
 let dicasDisponiveis = 3; // Número de dicas disponíveis
 const dicas = document.querySelectorAll(".dica .opcoes div"); // Botões de dica
@@ -11,6 +11,7 @@ export function usarDica(e) {
     e.currentTarget.classList.add("ativado");
     e.currentTarget.classList.add("usado");
     dicasDisponiveis--;
+    sounds.eTaBom.play(); // Toca som de pulo
 
     // Seleciona todas as respostas
     const botoes = document.querySelectorAll(".answer");

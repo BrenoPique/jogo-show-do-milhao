@@ -52,11 +52,6 @@ body {
   border: none;
 }
 
-a {
-  position: absolute;
-  color: white;
-}
-
 .pontos {
   margin-left: 20px;
   display: inline-block;

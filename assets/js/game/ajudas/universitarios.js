@@ -1,5 +1,5 @@
 // universitarios.js
-
+import sounds from "../modulo/sounds.js";
 // Seleciona os elementos de universitários da interface
 const universitarios = document.querySelectorAll(".universitarios .opcoes div"); // Botões de ajuda "Universitários"
 let universitariosDisponiveis = 3; // Quantidade de universitários disponíveis
@@ -16,6 +16,7 @@ export function usarUniversitarios(e) {
     e.currentTarget.classList.add("ativado");
     e.currentTarget.classList.add("usado");
     universitariosDisponiveis--;
+    sounds.oi.play();
 
     cronometro.tempoRestante += 15; // Adiciona 15 segundos ao cronômetro
 
