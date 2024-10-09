@@ -33,7 +33,7 @@ const typeWriter = (elemento) => {
   arrayPergunta.forEach((letra, index) => {
     setTimeout(() => {
       elemento.innerHTML += letra; // Exibe letra por letra
-    }, 100 * index); // Intervalo de 100ms entre cada letra
+    }, 50 * index); // Intervalo de 100ms entre cada letra
   });
 };
 

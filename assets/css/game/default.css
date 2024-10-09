@@ -73,6 +73,10 @@ header button {
   transition: 0.2s;
 }
 
+.informativo p {
+  background-color: red;
+}
+
 .informativo button:hover {
   background-color: rgb(255, 0, 0);
 }

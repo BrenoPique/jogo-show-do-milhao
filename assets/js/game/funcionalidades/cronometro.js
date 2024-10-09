@@ -2,7 +2,11 @@
 
 import sounds from "../modulo/sounds.js";
 import { exibirPopupEliminado } from "./ui.js";
-import { carregarPergunta } from "../script.js";
+import {
+  carregarPergunta,
+  diminuirErrosRestantes,
+  condicoesFim,
+} from "../script.js";
 import { desabilitarRespostas } from "./ui.js";
 
 // Seleciona os elementos do cronômetro
@@ -32,6 +36,7 @@ export function iniciarCronometro() {
 
     if (cronometro.tempoRestante <= 0) {
       clearInterval(timer); // Para o cronômetro quando o tempo acaba
+      diminuirErrosRestantes();
       setTimeout(() => {
         sounds.somErrou.play(); // Toca som de erro
         exibirPopupEliminado(); // Exibe o pop-up de eliminação
@@ -44,7 +49,7 @@ export function iniciarCronometro() {
         btnContinuar.onclick = () => {
           btnContinuar.style.opacity = "0.5";
           btnContinuar.style.pointerEvents = "none";
-          carregarPergunta(); // Carrega a próxima pergunta ao continuar
+          condicoesFim();
         };
       }, 1000);
     }

@@ -54,6 +54,7 @@ body {
 
 a {
   position: absolute;
+  color: white;
 }
 
 .pontos {
@@ -63,4 +64,25 @@ a {
   text-align: center;
   background-color: #fafafa85;
   border-radius: 20px;
+}
+
+.premio {
+  position: absolute;
+  bottom: -80px;
+  height: 50px;
+  width: 50px;
+  background-size: contain;
+}
+
+.mark:nth-of-type(2) .premio {
+  background-image: url(../../images/end/chaveiro.png);
+}
+.mark:nth-of-type(3) .premio {
+  background-image: url(../../images/end/bala.png);
+}
+.mark:nth-of-type(4) .premio {
+  background-image: url(../../images/end/pirulito.png);
+}
+.mark:nth-of-type(5) .premio {
+  background-image: url(../../images/end/bis.png);
 }

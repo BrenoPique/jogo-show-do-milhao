@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/end/default.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
   </head>
   <body>
     <a href="index.html">Voltar</a>
@@ -12,15 +13,24 @@
       <h2>Sua pontuação: <span class="pontos">0 pts</span></h2>
       <div class="progress-bar">
         <div class="progress" id="progress"></div>
-        <div class="mark" style="left: 25%"></div>
+        <div class="mark" style="left: 25%">
+          <div class="premio"></div>
+        </div>
         <!-- 10 mil pontos -->
-        <div class="mark" style="left: 50%"></div>
+        <div class="mark" style="left: 50%">
+          <div class="premio"></div>
+        </div>
         <!-- 100 mil pontos -->
-        <div class="mark" style="left: 75%"></div>
+        <div class="mark" style="left: 75%">
+          <div class="premio"></div>
+        </div>
         <!-- 500 mil pontos -->
-        <div class="mark" style="left: 100%"></div>
+        <div class="mark" style="left: 100%">
+          <div class="premio"></div>
+        </div>
         <!-- 1 milhão de pontos -->
       </div>
+      <div id="tsparticles"></div>
     </div>
   </body>
   <script src="assets/js/end/progress.js"></script>

@@ -35,7 +35,8 @@
   cursor: none;
 }
 
-.continue {
+.continue,
+.informativo p {
   opacity: 0.5;
 }
 

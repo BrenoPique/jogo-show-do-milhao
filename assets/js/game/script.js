@@ -20,6 +20,7 @@ const respostas = document.querySelector(".answers");
 const spnQuantidade = document.querySelector(".spnQtd");
 const btnContinuar = document.querySelector(".continue");
 const btnParar = document.querySelector(".parar");
+const txtPerder = document.querySelector(".informativo p");
 
 let indiceAtual = 0;
 let respostasCorretas = 0;
@@ -34,6 +35,10 @@ const { faceis, medias, dificeis } = separarPerguntas(perguntas);
 
 export function aumentarIndice() {
   indiceAtual++;
+}
+
+export function diminuirErrosRestantes() {
+  errosRestantes--;
 }
 
 function calcularPontuacao(dificuldade) {
@@ -72,6 +77,8 @@ export function carregarPergunta() {
     dificuldadeAtual = 3;
     indiceAtual = 0;
     pontosAcerta = calcularPontuacao(3);
+  } else if (dificuldadeAtual === 3 && respostasCorretas === 14) {
+    pontosAcerta = calcularPontuacao(3) * 10;
   }
 
   if (dificuldadeAtual === 1 && indiceAtual < faceis.length) {
@@ -92,19 +99,29 @@ export function carregarPergunta() {
     }
   } else if (dificuldadeAtual === 3 && indiceAtual < dificeis.length) {
     item = dificeis[indiceAtual];
-    pontosPergunta = calcularPontuacao(3);
+    if (respostasCorretas === 15) {
+      pontosPergunta = calcularPontuacao(3) * 10;
+    } else {
+      pontosPergunta = calcularPontuacao(3);
+    }
     if (indiceAtual === 0) {
       pontosAcerta = pontosPergunta;
     } else if (respostasCorretas === 11 && !virada2) {
       pontos -= 60000;
       pontosAcerta = pontos + pontosPergunta;
       virada2 = true;
-    } else {
+    } else if (respostasCorretas <= 14) {
       pontosAcerta = pontos + pontosPergunta;
+    } else {
+      pontosAcerta = calcularPontuacao(3) * 10;
     }
   } else {
     carregarPergunta();
     return;
+  }
+
+  if (errosRestantes === 1) {
+    txtPerder.style.opacity = "1";
   }
 
   atualizarPontuacao();
@@ -116,6 +133,20 @@ export function carregarPergunta() {
   });
 
   iniciarCronometro();
+}
+
+export function condicoesFim() {
+  if (respostasCorretas === 16) {
+    sessionStorage.clear();
+    sessionStorage.setItem("pontuacaoFinal", pontos - 500000);
+    window.location.href = "end.html";
+  } else if (errosRestantes <= 0) {
+    sessionStorage.clear();
+    sessionStorage.setItem("pontuacaoFinal", pontos / 2);
+    window.location.href = "end.html";
+  } else {
+    carregarPergunta();
+  }
 }
 
 function proximaPergunta(e) {
@@ -133,7 +164,7 @@ function proximaPergunta(e) {
     respostaCorreta.classList.add("correct");
     sounds.somErrou.play();
     exibirPopupEliminado();
-    errosRestantes--;
+    diminuirErrosRestantes();
   }
 
   pararCronometro();
@@ -143,16 +174,7 @@ function proximaPergunta(e) {
   btnContinuar.onclick = () => {
     btnContinuar.style.opacity = "0.5";
     btnContinuar.style.pointerEvents = "none";
-    if (respostasCorretas === 15) {
-      sessionStorage.clear();
-      sessionStorage.setItem("pontuacaoFinal", pontos);
-      window.location.href = "end.html";
-    } else if (errosRestantes === 0) {
-      sessionStorage.clear();
-      sessionStorage.setItem("pontuacaoFinal", pontos / 2);
-      window.location.href = "end.html";
-    }
-    carregarPergunta();
+    condicoesFim();
   };
   btnParar.addEventListener("click", () => {
     sessionStorage.clear();
