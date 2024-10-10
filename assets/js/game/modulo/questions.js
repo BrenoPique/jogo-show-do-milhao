@@ -1044,12 +1044,13 @@ export default [
     difficulty: 2,
   },
   {
-    question: "República Democrática do Congo, em 1970",
+    question:
+      "Em qual ano e país ocorreu a primeira Cúpula Mundial sobre o Meio Ambiente, que ficou conhecida como a 'Conferência de Estocolmo'?",
     answers: [
-      { option: "Na Guiné Equatorial, em 1975", correct: false },
-      { option: "Na República Democrática do Congo, em 1970", correct: true },
-      { option: "N China, em 2019", correct: false },
-      { option: "No Brasil, em 2010", correct: false },
+      { option: "Na Noruega, em 1983", correct: false },
+      { option: "Na Suécia, em 1972", correct: true },
+      { option: "Na Alemanha, em 1990", correct: false },
+      { option: "Na Índia, em 1995", correct: false },
     ],
     difficulty: 2,
   },
